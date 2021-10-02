@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Store</title>
+    
+
+    <!-- CSS *ingorar* -->
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        background-color: transparent;
+        height: 70px;
+        display: flex;
+        align-items: center;  
+    }
+    body{
+        background-color: #750A1C;
+    }
+    li{
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: smaller;
+        font-weight: 600;   
+    }
+    ul li{
+        display: inline-block;
+        margin-right: 50px;
+        margin-top: 15px;
+    } 
+    ul{
+        padding: 0px 335px;
+        text-decoration: none;
+        list-style: none;
+    }
+    #Logo_Nike{
+        margin-left: 55px;
+        margin-top: 29px;
+        width: 100px;  
+    }
+    #Efecto_Puntos_01{
+        position: absolute;
+        opacity: 0.7;
+        color: -50%;
+        left: 500px;
+        top: 150px;
+        height: 400px;
+    }
+    #Efecto_Puntos_02{
+        position: absolute;
+        opacity: 0.7;
+        color: -50%;
+        left: 850px;
+    }
+    #Vector_BG{
+        position: absolute;
+        z-index: -1;
+        left: 50px;
+        height: 100%;  
+    }
+    .correo{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        background-color: #ebebeb;
+        left: 1235px;
+        top: 20px; 
+    }
+    #correo_ft{
+        width: 45%;
+        height: 45%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #Zapatilla_BG{
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 75px;
+        left: 345px;
+        rotate: -7;
+        z-index: 99;
+    }
+    .Sombra_Zapa_BG{
+        position: absolute;
+    background-image: url(/src/Ellipse\ 1.svg);
+    width: 747.26px;
+    height: 361.09px;
+    left: 390px;
+    top: 285px;
+    }
+    .Nombre, .Precio{
+        color: white;
+        font-family: 'Alatsi', sans-serif;
+        position: absolute;
+        top: 175px;
+        left: 50px;
+        font-size: 40px;
+    }
+    .Precio{
+        color: #038FF7;
+        top: 335px;
+        font-size: 29px;
+    }
+    #Descuento{
+        font-size:15px ;
+        margin-left: 4px;
+    }
+    #comprar_btn{
+        position: absolute;
+        color: white;
+        border: 1.25px solid #FFFFFF;
+        background-color: transparent;
+        font-family: 'Alatsi', sans-serif;
+        width: 150px;
+        height: 35px;
+        border-radius: 25px;
+        box-shadow: none;
+        left: 50px;
+        top: 410px;
+    }
+    .Sec_zapatilla_01, .Sec_zapatilla_02, .Sec_zapatilla_03{
+        position: absolute;
+        width: 310px;
+        height: 110px;
+        background-color: #d3d3d3;
+        border-radius: 35px;
+        top: 550px;
+        left: 330px;
+        font-family: 'Alatsi', sans-serif;
+        color: black;
+    }
+    .Sec_zapatilla_02{
+        left: 680px;
+    }
+    .Sec_zapatilla_03{
+        left: 1030px;
+    }
+    .box_zapa_01,.box_zapa_02,.box_zapa_03{
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        background-color: #038FF7;
+        border-top-left-radius: 35px;
+        border-bottom-left-radius:35px;
+    }
+    #zapa_01{
+        position: absolute;
+        bottom: 25.5px;
+        left: -20px;
+        width: 140px;
+        transform: rotate(-20deg);
+    }
+    #zapa_02{
+        position: absolute;
+        bottom: 15.5px;
+        left: -42.5px;
+        width: 180px;
+        transform: rotate(-20deg);
+    }
+    #zapa_03{
+        position: absolute;
+        bottom: 12.5px;
+        left: -42.5px;
+        width: 180px;
+        transform: rotate(-20deg);
+    }
+    .add_base{
+        position: absolute;
+        top: 675px;
+        height: 250px;
+        width: 1240px;
+        margin-top: 31.5px;
+        left: 55px;
+        background-image: url(src/add.jpg);
+    }
+    .footer{
+            position: absolute;
+            top: 1780px;
+            width: 100%;
+            height: 125px;
+            background-color: #5a0a17;
+            color: #e4e4e4;
+            font-family: 'Alatsi', sans-serif;
+            text-align: center;
+    }
+
+    #Nombre_zapa, #NW_IN,#Precio_zapa{
+        position: absolute;
+        font-size: 15px;
+        margin-top: 10px;
+        left: 130px;
+    }
+    #NW_IN{
+        color: rgb(175, 9, 9);
+        margin-top: 28px;
+        font-weight: lighter;
+    }
+    #Precio_zapa{
+        margin-top: 75px;
+    }
+
+    .Galeria_Hombre{
+        position: absolute;
+        top: 975px;
+        width: 100%;
+        height: 350px;
+        background: rgb(117,10,28);
+        background: linear-gradient(180deg, rgba(117,10,28,1) 10%, rgba(175,9,23,1) 78%);
+        color: #000000;
+        font-family: 'Alatsi', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Galeria_Mujer{
+        position: absolute;
+        top: 1325px;
+        width: 100%;
+        height: 400px;
+        background: rgb(175,9,23);
+        background: linear-gradient(180deg, rgba(175,9,23,1) 11%, rgba(117,10,28,1) 82%);
+        color: #000000;
+        font-family: 'Alatsi', sans-serif;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;    
+    }
+    .Galeria_Hombre div ,.Galeria_Mujer div{
+        width: 200px;
+        height: 150px;
+        background-color: rgb(255, 255, 255);
+        color: #e4e4e4;
+        margin: 20px;
+        margin-top: 150px;
+        border-radius: 15px;
+    }
+    #Z_Hombres, #Z_Mujer {
+        
+        position: absolute;
+        top: 65px;
+        color: #e4e4e4;
+        font-size: x-large;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 15px;
+        padding: 10px;
+        border: solid 1px white;
+    }
+
+    .HM1,.HM2,.HM3,.HM4,.HM5,.MJ1,.MJ2,.MJ3,.MJ4,.MJ5{
+        background-position: center;
+        background-size: 150px;
+        background-repeat: no-repeat;
+    }
+
+    .HM1{background-image: url(src/HM1.jpg);}
+    .HM2{background-image: url(src/HM2.jpg);}
+    .HM3{background-image: url(src/HM3.jpg);}
+    .HM4{background-image: url(src/HM4.jpg);}
+    .HM5{background-image: url(src/HM5.jpg);}
+
+    .MJ1{background-image: url(src/MJ1.jpg);}
+    .MJ2{background-image: url(src/MJ2.jpg);}
+    .MJ3{background-image: url(src/MJ3.jpg);}
+    .MJ4{background-image: url(src/MJ4.jpg);}
+    .MJ5{background-image: url(src/MJ5.jpg);}
+
+    .Galeria_Hombre div div,.Galeria_Mujer div div{
+        background-color: #038FF7;
+        height: 50px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        margin-left: 0px;
+        margin-top: 140px;
+    }
+    </style>
+
+</head>
+<body>
+
+    <!-- Fondo y efectos  -->
+
+    <img id="Efecto_Puntos_01" src="src/dot.svg">
+    <img src="src/Vector 120.svg" id="Vector_BG">
+    <img id="Efecto_Puntos_02" src="src/dot.svg">
+
+    <!-- Foto Zapatilla Principal  -->
+    <img src="src/zapatilla.png" id="Zapatilla_BG">
+    <div class="Sombra_Zapa_BG"></div>
+
+    <!-- Header  -->
+
+    <a href="#contacto"><div class="correo">
+        <img src="src/envelope.png" id="correo_ft"> 
+    </div></a>
+    <header>
+        <img src="src/Logo.png" alt="Nike Logo" id="Logo_Nike">
+        <ul>
+            <a href="#Z_Hombres"><li>MEN</li></a>
+            <a href="#Z_Mujer"><li>WOMEN</li></a>
+            <a href="#NewIn"><li>NEW IN</li></a>
+            <a href="#addd"><li>SALES</li></a>
+        </ul>
+        
+    </header>
+
+    <!-- Info zapatilla principal  -->
+    <div class="Info_BR">
+        <div class="Nombre">NIKE<br>FREE RUN<br>FLYKNIT</div>
+        <div class="Precio">$21.999 <p id="Descuento">25% OFF</p></div>   
+    </div>
+    <button id="comprar_btn">COMPRAR AHORA</button>
+
+    <!-- Sección zapatillas nuevas  -->
+    <a name="NewIn"><div class="Sec_zapatilla_01"></a>
+        <h2 id="Nombre_zapa">Nike Hurricane</h2>
+        <h5 id="NW_IN">New In!</h5>
+        <h4 id="Precio_zapa">Precio: $17.500</h4>
+        <div class="box_zapa_01">
+            <img src="src/zapas_01.png" id="zapa_01">
+        </div>
+    </div>
+    <div class="Sec_zapatilla_02">
+        <h2 id="Nombre_zapa">Nike Aventator</h2>
+        <h5 id="NW_IN">New In!</h5>
+        <h4 id="Precio_zapa">Precio: $20.000</h4>
+        <div class="box_zapa_02">
+            <img src="src/zapas_02.png" id="zapa_02">
+            
+        </div>
+    </div>
+    <div class="Sec_zapatilla_03">
+        <h2 id="Nombre_zapa">Nike Jordan 12</h2>
+        <h5 id="NW_IN">New In!</h5>
+        <h4 id="Precio_zapa">Precio: $34.999</h4>
+        <div class="box_zapa_03">
+            <img src="src/zapas-3.png" id="zapa_03">
+        </div>
+    </div>
+
+    <!-- Sección publicidad  -->
+    <div class="add_base">
+        <div class="add" id="addd"></div>
+    </div>
+    <!-- Sección zapatillas de hombre  -->
+    <div class="Galeria_Hombre">
+        <h3 id="Z_Hombres">Zapatillas de hombre</h3>
+        <div class="HM1"><div class="data"><span>Jordan 4<br>$21.000</span></div></div>
+        <div class="HM2"><div class="data"><span>Jordan 23<br>$27.500</span></div></div>
+        <div class="HM3"><div class="data"><span>Nike Mars<br>$20.250</span></div></div>
+        <div class="HM4"><div class="data"><span>Jordan 1 OG<br>$19.750</span></div></div>
+        <div class="HM5"><div class="data"><span>Jordan 1 Low<br>$16.000</span></div></div>
+    </div>
+
+    <!-- Sección zapatillas de mujer  -->
+    <div class="Galeria_Mujer">
+        <h3 id="Z_Mujer">Zapatillas de mujer</h3>
+        <div class="MJ1"><div class="data"><span>Airmax 85<br>$19.000</span></div></div>
+        <div class="MJ2"><div class="data"><span>Blazer Low<br>$11.500</span></div></div>
+        <div class="MJ3"><div class="data"><span>Puma Style<br>$10.200</span></div></div>
+        <div class="MJ4"><div class="data"><span>Nike Airforce 1<br>$15.000</span></div></div>
+        <div class="MJ5"><div class="data"><span>Adidas Run<br>$9.500</span></div></div>
+    </div>
+
+    <!-- Pie de pagina -->
+    <div class="footer" id="contacto"><br>CONTACTO<br><a href="https://www.instagram.com/nike/?hl=es-la">Instagram</a>    |    <a href="https://twitter.com/Nike">Twitter</a>    |    <a href="https://www.facebook.com/nikesportswear">Facebook</a><br> <br>Agustín Ascolani y Marco Gregori<br> ascolaniagustin@gmail.com y marco.gregori74@gmail.com</div>
+
+</body>
+</html>

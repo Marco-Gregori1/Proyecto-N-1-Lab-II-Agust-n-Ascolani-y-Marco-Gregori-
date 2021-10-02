@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+	<title>Tienda Nike</title>
+	<!-- CSS *ignorar* -->
+<style> 
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+	*{margin: 0px; padding: 0px;}
+	body {background-color: #CFCDCD;}
+
+	header{
+	 background-color: #CE051F;
+	 height: 215px; 
+	 display: flex;
+	 align-items: center; 
+	 width: 100%;
+	}
+	#nikelogo {
+		margin-left: 150px;
+		width: 225px;
+		height: 75px;
+	}
+	#titulo {
+		font-size: 45px;
+		color: azure;
+		font-family:'Alatsi', sans-serif;
+		font-weight: lighter;
+		margin-top: 18px;
+		margin-left: 70px;}
+
+	.contacto{
+		background-color: azure;
+		width: 100px;
+		height: 100px;
+		border-radius: 35px;
+		margin-left: 75px;
+		
+	}
+#correo{width: 70px;margin-top: 15px;margin-left: 13px;}
+#hamburguesa {width: 40px;height: 40px;border-radius: 10px;border: none;margin-left:500px;margin-top:5px ;}
+
+#buscador {background-color: rgb(54, 54, 68);height: 150px; align-items: center;}
+
+#lupa {position: absolute; width: 45px; top: 265px;left: 775px;}
+
+#search{ 
+	height: 85px;
+	width: 750px;
+	margin-left: 115px;
+	
+	margin-top: 30px;
+	border-radius: 50px; }
+::-webkit-input-placeholder { 
+  font-size: 35px;
+  margin-top: 10px;
+  
+}
+
+.add{width: 900px;height: 250px; background-image: url(src/add.jpg);margin-left:50px; margin-top: 35px; }
+
+#Z_Hombres{position: absolute; font-size: 45px; top:675px;}
+#Z_Mujeres{position: absolute; font-size: 45px; top:1615px;}
+
+.Galeria_Hombre, .Galeria_Mujer{
+		
+        width: 100%;
+        height: 750px;
+        color: #000000;
+        font-family: 'Alatsi', sans-serif;
+        text-align: center;
+		background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+		margin-top: 150px;
+		
+    }
+
+.Galeria_Hombre div, .Galeria_Mujer div{
+	
+	width: 400px;
+	height: 350px;
+	background-color: azure;
+	border-radius: 35px;
+	margin-top: 5px;
+	margin: 20px;
+	
+}
+.Galeria_Hombre div div, .Galeria_Mujer div div{
+	width:400px;
+	height: 100px;
+	background-color: #750A1C;
+	color: white;
+	font-family: 'Alatsi', sans-serif;
+	margin-left: 0px;
+	font-size: 20px;
+	border-top-left-radius:0px ;
+	margin-top: 250px;
+	border-top-right-radius:0px ;
+}
+.HM1,.HM2,.HM3,.HM4,.MJ1,.MJ2,.MJ3,.MJ4{
+        background-position: center;
+        background-size: 250px;
+        background-repeat: no-repeat;
+    }
+
+    .HM1{background-image: url(src/HM1.jpg);}
+    .HM2{background-image: url(src/HM2.jpg);}
+    .HM3{background-image: url(src/HM3.jpg);}
+    .HM4{background-image: url(src/HM4.jpg);}
+    
+
+    .MJ1{background-image: url(src/MJ1.jpg);}
+    .MJ2{background-image: url(src/MJ2.jpg);}
+    .MJ3{background-image: url(src/MJ3.jpg);}
+    .MJ4{background-image: url(src/MJ4.jpg);}
+   
+span{
+	font-size: 28px;
+}
+.footer{background-color:#750A1C ; height:200px ;color: white;
+	font-family: 'Alatsi', sans-serif;text-align: center;font-size: 35px;margin-top: 40px;
+	text-decoration: none;}
+	a{ text-decoration: none}
+</style>
+
+</head>
+	<body>
+		<header> 
+			<h1 id= "titulo"> Nike Argentina</h1>  
+			<img id= "nikelogo" src="src/Nikelogo.png" alt="logo" >
+			<a href="#Contacto"><div class="contacto"> <img id="correo" src="src/envelope.png"></div></a>
+		</header>
+			<div id="buscador">
+				<form name="ejemplo" action="22-html5-search-input.php" method="POST">
+					 <input type="search" id="search"name="busqueda"placeholder="   Buscar"><br>
+					<div>
+						<img id=lupa src= "src/Lupa.png">
+					</div>
+				</form>
+				<img src="" alt="">
+			</div>
+			<div class="add"></div>
+
+			<div class="Galeria_Hombre">
+				<h3 id="Z_Hombres">Zapatillas de hombre</h3>
+				<div class="HM1"><div class="data"><span>Jordan 4<br>$21.000</span></div></div>
+				<div class="HM2"><div class="data"><span>Jordan 23<br>$27.500</span></div></div>
+				<div class="HM3"><div class="data"><span>Nike Mars<br>$20.250</span></div></div>
+				<div class="HM4"><div class="data"><span>Jordan 1 OG<br>$19.750</span></div></div>
+			</div>
+			<div class="Galeria_Mujer">
+				<h3 id="Z_Mujeres">Zapatillas de mujer</h3>
+				<div class="MJ1"><div class="data"><span>Jordan 4<br>$21.000</span></div></div>
+				<div class="MJ2"><div class="data"><span>Jordan 23<br>$27.500</span></div></div>
+				<div class="MJ3"><div class="data"><span>Nike Mars<br>$20.250</span></div></div>
+				<div class="MJ4"><div class="data"><span>Jordan 1 OG<br>$19.750</span></div></div>
+			</div>
+			<div class="footer" id="Contacto">CONTACTO<br><a href="https://www.instagram.com/nike/?hl=es-la">Instagram</a>    |    <a href="https://twitter.com/Nike">Twitter</a>    |    <a href="https://www.facebook.com/nikesportswear">Facebook</a><br>Agustín Ascolani y Marco Gregori<br> ascolaniagustin@gmail.com y marco.gregori74@gmail.com</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
